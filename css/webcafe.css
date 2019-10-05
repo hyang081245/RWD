@@ -1,0 +1,473 @@
+@charset "utf-8";
+@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url('./fonts.css');
+@import url('./normalize.css');
+@import url('./reset.css');
+/* 숨김 콘텐츠 */
+legend, .a11y-hidden{
+  background: pink;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+
+/* 링크 스타일 */
+a{
+  color: inherit;
+  text-decoration: none;
+}
+/* 기본 스타일 */
+html{
+  font-size: 10px;
+}
+body{
+  font-family: 'Spoqa Han Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  background: #fff;
+  color: #181818;
+}
+/* 공통 스타일 */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+/* 공통 검색 폼 */
+input[type="search"]{
+  border: 1px solid #666;
+  border-radius: 5px;
+  padding: 5px 10px;
+  height: 30px;
+}
+.search-form label, input[type="search"], .btn-search{
+  vertical-align: middle;
+}
+/* 공통 반응형 콘텐츠 */
+.rwd-img{
+  max-width: 100%;
+  height: auto;
+}
+/* 공통 메인 콘텐츠 섹션 제목 */
+.main-section-heading{
+  background: url('./images/sprite_main.png') no-repeat;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding-left: 65px;
+  min-height: 60px;
+  margin: 1em 0;
+}
+.en-heading{
+  display: block;
+}
+.recommend-book-heading {
+  background-position: 0 0;
+}
+.recommend-book-heading .en-heading {
+  color: #abd375;
+}
+.news-heading {
+  background-position: 0 -230px;
+}
+.news-heading .en-heading {
+  color: #e8ca58;
+}
+.board-heading {
+  background-position: 0 -115px;
+  margin-bottom: 0.5em;
+}
+.board-heading .en-heading {
+  color: #c7b39a;
+}
+.favorite-site-heading {
+  background-position: 0 -345px;
+}
+.favorite-site-heading .en-heading {
+  color: #eea60a;
+}
+.twitter-heading {
+  background-position: 0 -460px;
+}
+.twitter-heading .en-heading {
+  color: #6aaee6;
+}
+/* 공통 추천 서적 */
+.recommend-book-cover{
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+.recommend-book-cover figcaption{
+  font-weight: 700;
+  margin: 1em;
+}
+.recommend-book-detail{
+  text-align: center;
+}
+.recommend-book-author, .recommend-book-author-name{
+  display: inline;
+}
+.recommend-book-grade{
+  font-size: 2.5rem;
+  color: #abd375;
+}
+[class$="summary"]{
+  line-height: 1.5;
+  margin: 1em 0;
+}
+/* 공통 새소식 반응형 비디오 */
+.iframe-container{
+  width: 100%;
+  height: 0;
+  padding-top: calc(9/16 * 100%);
+  position: relative;
+}
+.rwd-iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.news-date{
+  display: block;
+  text-align: right;
+}
+/* 공통 게시판 */
+.board{
+  position: relative;
+}
+.board-list a, .board-list time{
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  top: 5px;
+}
+.board-list a{
+  width: calc(100% - 105px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.board-more{
+  position: absolute;
+  top: 1.5em;
+  right: 0;
+}
+/* 공통 인기사이트 */
+.favorite-site-list {
+  overflow: hidden;
+}
+.favorite-site-list li {
+  counter-increment: number;
+  margin: 1em 0;
+}
+.favorite-site-list li::before {
+  content: counter(number, decimal);
+  background: #eea60a;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+}
+/* 공통 트위터 */
+.twitter-content{
+  position: relative;
+  padding-right: 25%;
+}
+.twitter-user-name, .twitter-user-id{
+  display: inline;
+}
+.twitter-profile{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  text-align: right;
+}
+.twitter-profile img{
+  border-radius: 50%;
+  border: 1px solid #666;
+  padding: 5px;
+}
+/* 공통 푸터 */
+.footer {
+  background-color: #988574;
+  color: #fff;
+  text-align: center;
+  padding: 2em 0;
+  margin-top: 2em;
+}
+/* 주소 및 저작권 공통 */
+.address {
+  font-style: normal;
+  margin-bottom: 1em;
+}
+.copyright {
+  font-size: 1em;
+}
+/* 모바일 레이아웃 */
+@media screen and (min-width: 320px) and (max-width: 999px){
+  .header{
+    background: #38302e;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 1em;
+  }
+  .logo, .member, .search-form{
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* 모바일 로고 */
+  .logo{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  /* 모바일 멤버링크 */
+  .member{
+    background: #988574;
+    order: -1;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .member a{
+    display: block;
+    padding: 5px 2px;
+    margin-left: 1em;
+  }
+  /* 모바일 검색 폼 */
+  input[type="search"]{
+    width: calc(100% - 35px);
+  }
+  .btn-search{
+    position: relative;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    padding: 0;
+  }
+  .btn-search::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url('./images/btn_search.png') no-repeat;
+    background-size: 100%;
+  }
+  /* 모바일 메인메뉴 */
+  .btn-menubar{
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .menubar{
+    background: #fff;
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    left: 0;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .menubar-top{
+    top: 0;
+  }
+  .menubar-middle{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .menubar-bottom{
+    top: 100%;
+    transform: translateY(-100%);
+  }
+  .is-act .menubar-top{
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .is-act .menubar-middle{
+    transform: translate(-100%, -50%);
+  }
+  .is-act .menubar-bottom{
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  .menu{
+    width: 70%;
+    height: 100vh;
+    padding: 3em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    transform: translateX(-100%);
+    transition: all 0.2s;
+  }
+  .is-act .menu{
+    transform: translateX(0);
+  }
+  .menu-list{
+    margin-bottom: 1em;
+  }
+  .menu-item{
+    cursor: pointer;
+  }
+  .sub-menu{
+    display: none;
+    list-style: disc;
+    padding-left: 40px;
+  }
+  .menu-act .sub-menu{
+    display: block;
+  }
+  .sub-menu li{
+    margin: 0.5em 0;
+  }
+  /* 모바일 메인 콘텐츠 레이아웃 */
+  .main{
+    padding: 0 20px;
+  }
+  /* 모바일 추천 서적 */
+  .recommend-book-cover{
+     width: 50%;
+  }
+  /* 모바일 푸터 */
+  .footer{
+    text-align: left;
+    padding: 1em;
+  }
+  .address span{
+    display: block;
+  }
+}
+/* 데스크탑 스타일 */
+@media screen and (min-width: 1000px){
+  /* 데스크탑 레이아웃 */
+  .header, .menu, .main, .slogan{
+    width: 1000px;
+    margin: 0 auto;
+  }
+  /* 데스크탑 헤더 */
+  .header {
+    position: relative;
+    padding-bottom: 1em;
+  }
+  /* 데스크탑 로고 */
+  .logo{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    margin-top: -29px;
+  }
+  .logo img{
+    vertical-align: top;
+  }
+  /* 데스크탑 멤버링크 */
+  .member{
+    font-size: 0;
+    text-align: right;
+    padding: 2px 0;
+    margin-right: -1.4rem;
+  }
+  .member li, .member a{
+    display: inline-block;
+  }
+  .member li{
+    font-size: 1.4rem;
+  }
+  .member li:nth-child(n+2)::before{
+    content: '|';
+   }
+  .member a{
+    padding: 0.5em 1em;
+  }
+  /* 데스크탑 검색 폼 */
+  .search-form{
+    text-align: right;
+  }
+  input[type="search"]{
+    width: 400px;
+  }
+  .btn-search{
+    padding: 5px 10px;
+    border: 1px solid #666;
+    background: #988574;
+    border-radius: 5px;
+    color: #fff;
+    height: 30px;
+  }
+  /* .btn-search::before{
+    content: '검색';
+  } */
+  /* 데스크탑 메인메뉴 */
+  .btn-menubar{
+    display: none;
+  }
+  .navigation{
+    background: #988574;
+    box-shadow: 0px -2px 3px 0 #666, 0px 2px 3px 0 #666;
+  }
+  .menu::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .menu li{
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .menu-list{
+    float: left;
+    color: #fff;
+    margin-left: 100px;
+  }
+  .menu-list:first-child{
+    margin-left: 0;
+  }
+  .menu-item{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+  }
+  .sub-menu{
+    margin-left: 1.5em;
+  }
+  /* 데스크탑 메인 콘텐츠 레이아웃 */
+  .main{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(12, 65px);
+    grid-column-gap: 20px;
+    grid-template-areas: "book book book book news news news news news news news news"
+                         "board board board board twitter twitter twitter twitter twitter favorite favorite favorite";
+  }
+  .recommend-book{
+    grid-area: book;
+  }
+  .news{
+    grid-area: news;
+  }
+  .board{
+    grid-area: board;
+  }
+  .favorite-site{
+    grid-area: favorite;
+  }
+  .twitter{
+    grid-area: twitter;
+  }
+}
