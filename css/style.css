@@ -1,27 +1,17 @@
 @charset "utf-8";
 @import url(./normalize.css);
 
+/*all divice*/
 .container{
   background-color:silver;
   display: flex;
-  /* flex-direction: row;
-  flex-wrap: wrap; */
   flex-flow: row wrap;
-  justify-content:space-evenly;
-  align-items: center;
-  height: 100vh;
-  align-content: flex-start;
 }
-.container > *{
-  /* flex-grow: 0;
-  flex-shrink:1;
-  flex-basis: auto; */
-  flex:0 1 auto;
 
-}
 .header, .navigation, .main, .footer{
   width: 100%;
 }
+
 .header{
   background-color: yellowgreen;
    height: 10vh; 
@@ -32,11 +22,66 @@
 }
 .main{
   background-color: skyblue;
-  height: 20vh;
+  height: 60vh;
+  display: flex;
+  flex-flow: row wrap; 
+}
+.book, .news, .board, .favorite, .twitter{
+  width: 100%;
+}
+.book{
+  background-color: blueviolet;
+}
+.news{
+  background-color: orangered;
+}
+.board{
+  background-color: teal;
+}
+.favorite{
+background-color: aqua;
+}
+.twitter{
+  background-color: goldenrod
 }
 .footer{
   background-color: orange;
   height: 10vh;
-  align-self: flex-end;
 }
 
+
+/*mobile device*/
+@media screen and (max-width:1000px){
+  .favorite, .twitter{
+    width: 50%;
+  }
+}
+
+/*desktop divice*/
+@media screen and (min-width : 1000px){
+  .container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .header, .main {
+    width: 1000px;
+  }
+  .main{ 
+    justify-content: space-between;
+  }
+  .book {
+    width: 330px;
+  }
+  .news{
+    width: 660px;
+  }
+  .board{
+    width: 320px;
+  }
+  .favorite{
+    width: 240px;
+  }
+  .twitter{
+    width: 400px;
+  }
+}
