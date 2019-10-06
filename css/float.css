@@ -73,9 +73,9 @@ background-color: aqua;
   }
   .favorite{
     width: 240px;
+    float:right;
   }
   .twitter{
     width: 400px;
-    float:left;
   }
 }
