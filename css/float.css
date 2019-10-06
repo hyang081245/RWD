@@ -1,0 +1,81 @@
+@charset "utf-8";
+@import url(./normalize.css);
+
+/*all divice*/
+.container{
+  background-color:silver;
+}
+
+.header{
+  background-color: yellowgreen;
+   height: 10vh; 
+}
+.navigation{
+  background-color: pink;
+  height: 20vh;
+}
+.main{
+  background-color: skyblue;
+  overflow: hidden;
+  height: 60vh; 
+}
+
+.book{
+  background-color: blueviolet;
+}
+.news{
+  background-color: orangered;
+}
+.board{
+  background-color: teal;
+}
+.favorite{
+background-color: aqua;
+}
+.twitter{
+  background-color: goldenrod
+}
+.footer{
+  background-color: orange;
+  height: 10vh;
+}
+
+
+/*mobile divice*/
+@media screen and (max-width:1000px){
+  
+  .favorite, .twitter {
+    width: 50%;
+    float: left;
+  }
+
+}
+
+
+
+/*desktop divice*/
+@media screen and (min-width:1000px){
+  .header, .main{
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .main > * {
+    float: left;
+  }
+.book, .board, .twitter{
+  margin-right: 20px;
+}
+  .board, .book{
+    width: 320px;
+  }
+  .news {
+    width: 660px;
+  }
+  .favorite{
+    width: 240px;
+  }
+  .twitter{
+    width: 400px;
+    float:left;
+  }
+}
