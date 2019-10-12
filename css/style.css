@@ -1,9 +1,45 @@
 @charset "utf-8";
 @import url(./normalize.css);
-
+*, *::before, *::after {
+  box-sizing: border-box; 
+  font-family: 'Spoqa Han Sans', 'Sans-serif'; 
+}
+html {
+  font-size: 10px;
+}
+body{
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: #181818;
+  background-color: #fff;
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/*제목초기화*/
+h1, h2, h3, h4, h5, h6{
+  font-size: 1em;
+  font-weight: 300;
+}
+fieldset{
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*공통 숨김 콘텐츠*/
+legend, .ally-hidden{
+  background: pink;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0)
+}
 /*all divice*/
 .container{
-  background-color:silver;
   display: flex;
   flex-flow: row wrap;
 }
@@ -12,10 +48,59 @@
   width: 100%;
 }
 
+/*공통헤더*/
+
 .header{
-  background-color: yellowgreen;
-   height: 10vh; 
+padding-bottom: 1em;
+  display: flex;
+  flex-flow: row wrap;
 }
+.logo, .member, .search{
+  width: 100%;
+}
+/*공통 멤버*/
+.member{
+  display: flex;
+  justify-content: flex-end;
+  order: -1;
+  margin: 0;
+  list-style: none;
+  padding: 2px 0;
+}
+.member a{
+  display: inline-block;
+  padding: 0.5em 0;
+}
+/*공통로고*/
+.logo{
+}
+/*공통검색*/
+.search{
+  order: 1;
+}
+input[type="search"], .btn-search{
+  vertical-align: top;
+}
+input[type="search"]{
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 2px 5px;
+ height: 30px;
+}
+
+input[type="search"]:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: transparent;
+}
+input[type="search"]:focus::-moz-placeholder { /* Firefox 19+ */
+  color: transparent;
+}
+input[type="search"]:focus:-ms-input-placeholder { /* IE 10+ */
+  color: transparent;
+}
+input[type="search"]:focus:-moz-placeholder { /* Firefox 18- */
+  color: transparent;
+}
+
 .navigation{
   background-color: pink;
   height: 20vh;
@@ -50,12 +135,66 @@ background-color: aqua;
 }
 
 
+
+
+
+
 /*mobile device*/
+
 @media screen and (max-width:1000px){
-  .favorite, .twitter{
-    width: 50%;
+/*모바일 헤더*/
+  .header{
+    background-color: #38302e;
+  }
+  .logo, .member, .search{
+    padding: 0 1.5em;
+  }
+  .logo{   
+    margin-top:0.5em;
+    margin-bottom: 0.5em;
+  }
+  /*모바일 검색*/
+
+  .search fieldset{
+    font-size: 0;
+  }
+  input[type="search"]{
+    width: calc(100% - 4.5rem);
+    font-size: 1.6rem;
+  }
+  .btn-search{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    position: relative;
+    margin-left: 1.5rem;
+  }
+  .btn-search::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/btn_search.png) no-repeat 0 0 / cover;
+  }
+  .member{
+    background-color: #988574;
+    color: #fff;
+  }
+  .member a{
+    margin-left: 1em;
+  }
+  .bar{
+    display: none;
   }
 }
+
+
+
 
 /*desktop divice*/
 @media screen and (min-width : 1000px){
@@ -65,6 +204,37 @@ background-color: aqua;
   }
   .header, .main {
     width: 1000px;
+  }
+  .header{
+    position: relative;
+  }
+  /*데스크탑 멤버*/
+  .bar{
+    margin: 0 0.5em;
+  }
+  /*데스크탑 로고*/
+  .logo{
+    position: absolute;
+    width: initial;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+  /*데스크탑 검색*/
+  .search{
+    text-align: right;
+  }
+  input[type="search"]{
+    width: 25em;
+  }
+  .btn-search{
+    border: 1px solid #aaa;
+    background: #988574;
+    color:#fff;
+    height: 3rem;
+    padding: 0.15em 1em;
+    border-radius: 5px;
   }
   .main{ 
     justify-content: space-between;
