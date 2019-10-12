@@ -8,7 +8,26 @@
 
 .header{
   background-color: yellowgreen;
-   height: 10vh; 
+  padding-top: 50px;
+
+}
+.logo, .member, .search{
+  width: 100%;
+}
+.logo {}
+.member{
+  float: right;
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  top:0;
+}
+.member li{
+  float:left;
+}
+.search{
 }
 .navigation{
   background-color: pink;
