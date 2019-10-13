@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/style.css"> 
     <!-- <link rel="stylesheet" href="./css/float.css">  -->
     <!-- <link rel="stylesheet" href="./css/grid.css"> -->
+    <script src="./js/jquery.min.js" defer></script>
+    <script src="./js/menu.js" defer></script>
 
 </head>
 <body>
@@ -28,7 +30,56 @@
                 </fieldset>
             </form>
         </header>
-        <nav class="navigation">내비게이션</nav>
+        <nav class="navigation">
+            <h2 class="a11y-hidden">메인 메뉴</h2>
+            <button class="btn-menubar" aria-label="메뉴열기">
+                <span class="menubar menubar-top"></span>
+                <span class="menubar menubar-middle"></span>
+                <span class="menubar menubar-bottom"></span>
+            </button>
+            <ul class="menu">
+                <li class="menu-list">
+                    <a href="#"" class="menu-item">HTML에 대해</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">HTML5 소개</a></li>
+                        <li><a href="#">레퍼런스 소개</a></li>
+                        <li><a href="#">활용예제</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list">
+                    <a class="menu-item">CSS에 대해</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">CSS 소개</a></li>
+                          <li><a href="#">CSS2 VS CSS3</a></li>
+                          <li><a href="#">CSS 애니메이션</a></li>
+                        </ul>
+                </li>
+                <li class="menu-list">
+                    <a class="menu-item">웹표준/웹접근성</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">웹표준 이란?</a></li>
+                          <li><a href="#">웹접근성의 개요</a></li>
+                          <li><a href="#">HTML5의 현재와 미래</a></li>
+                        </ul>
+                </li>
+                <li class="menu-list">
+                    <a class="menu-item">묻고 답하기</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">묻고 답하기</a></li>
+                          <li><a href="#">FAQ</a></li>
+                          <li><a href="#">1대1 질문</a></li>
+                        </ul>
+                </li>
+                <li class="menu-list">
+                    <a class="menu-item">자료실</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">공개 자료실</a></li>
+                          <li><a href="#">이미지 자료실</a></li>
+                          <li><a href="#">예제 자료실</a></li>
+                        </ul>
+                </li>
+            </ul>
+        </nav>
         <main class="main">
             <section class="book">추천서적</section>
             <section class="news">새소식<br>새소식<br>새소식<br>새소식<br>새소식<br>
