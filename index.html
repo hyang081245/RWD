@@ -81,8 +81,75 @@
             </ul>
         </nav>
         <main class="main">
-            <section class="book">추천서적</section>
-            <section class="news">새소식<br>새소식<br>새소식<br>새소식<br>새소식<br>
+            <section class="book">
+                <h2 class="book-heading ir">
+                  추천 서적
+                  <span class="en-block point-color-green">
+                    Recommend Book
+                  </span>
+                </h2>
+                <figure class="book-cover">
+                  <img
+                    class="responsive"
+                    src="images/book_rwd.jpg"
+                    alt=""
+                    aria-labelledby="book-cover-caption"
+                  />
+                  <figcaption id="book-cover-caption">
+                    반응형웹 핵심 가이드북 도서
+                  </figcaption>
+                </figure>
+                <dl class="book-detail">
+                  <dt>저자</dt>
+                  <dd>김데레사</dd>
+                  <dt class="a11y-hidden">평점</dt>
+                  <dd class="book-grade" aria-label="5점 만점에 4점">
+                    <span aria-hidden="true">★★★★☆</span>
+                  </dd>
+                </dl>
+                <p class="recommend">
+                  반응형웹 디자인을 위한 핵심 내용을 다루고 있으며 미디어쿼리, 유연한
+                  레이아웃, 반응형 이미지 기법을 학습할 수 있다. 모바일 및 다양한
+                  해상도에 대응이 가능한 웹디자인을 이 책으로 시작해 보자!
+                </p>
+              </section>
+            
+              <section class="news">
+                <h2 class="news-heading ir">
+                  새소식 <span class="en-block point-color-yellow">WebCafe News</span>
+                </h2>
+                <figure class="news-video-container">
+                  <!-- <video class="news-video rwd-img" poster="media/poster.jpg" controls>
+                    <source src="media/stories.mp4" type="video/mp4" />
+                    <track
+                      src="media/stories-en.vtt"
+                      kind="captions"
+                      srclang="en"
+                      label="English Caption"
+                    />
+                  </video> -->
+                  <div class="iframe-container">
+                    <iframe
+                      class="iframe-video"
+                      src="https://www.youtube.com/embed/0Jw7OBkkfzo"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <figcaption class="a11y-hidden">구글 개발자 이야기</figcaption>
+                </figure>
+                <p class="news-summary">
+                  구글플레이는 다양한 분야에서 활약하고 있는 국내 개발사들을 모시고 직접
+                  이야기를 나눠보는 ‘구글플레이 개발자와의 대화’ 행사를 정기적으로
+                  개최할 예정입니다. 오늘 3월 29일(수) 구글 캠퍼스 서울에서 열린 첫 번째
+                  ‘구글플레이 개발자와의 대화’는 ‘해외에서 빵터진 한국 앱'을 주제로
+                  진행됐는데요, 국내 앱 시장은 물론 글로벌 시장에서도 주목 받으며 글로벌
+                  진출의 본보기가 되고 있는 개발사 세 곳과 함께 했습니다.
+                </p>
+                <time class="news-date icon-calendar" datetime="2019-10-19T14:03:23">
+                  2019.10.19
+                </time>
+              </section>
+
             </section>
             <section class="board">게시판</section>
             <section class="favorite">인기사이트</section>
