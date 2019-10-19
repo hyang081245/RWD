@@ -216,6 +216,34 @@ input[type="search"]:focus:-moz-placeholder { /* Firefox 18- */
 }
 
 /*공통 게시판*/
+.board{
+  position: relative;
+}
+.board-list{
+list-style: none;
+padding-left: 1em;
+}
+.board-list li{
+  margin-top: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.board-list li > :nth-child(1){
+flex: 1 0 0;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.board-more{
+  position: absolute;
+  top: 1em;
+  right: 0;
+}
+
+
+
+
 
 /*공통 인기 사이트*/
 
