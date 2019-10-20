@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>반응형 웹</title>
   <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
   <!-- <link rel="stylesheet" href="./css/float.css">  -->
   <!-- <link rel="stylesheet" href="./css/grid.css"> -->
@@ -32,6 +34,7 @@
         </fieldset>
       </form>
     </header>
+
     <nav class="navigation">
       <h2 class="a11y-hidden">메인 메뉴</h2>
       <button class="btn-menubar" aria-label="메뉴열기">
@@ -41,7 +44,7 @@
       </button>
       <ul class="menu">
         <li class="menu-list">
-          <a href="#"" class=" menu-item">HTML에 대해</a>
+          <a href="#" class=" menu-item">HTML에 대해</a>
           <ul class="sub-menu">
             <li><a href="#">HTML5 소개</a></li>
             <li><a href="#">레퍼런스 소개</a></li>
@@ -82,6 +85,7 @@
         </li>
       </ul>
     </nav>
+
     <main class="main">
       <section class="book">
         <h2 class="book-heading ir">
@@ -143,7 +147,6 @@
         </time>
       </section>
 
-      </section>
 
       <section class="board">
         <h2 class="board-heading ir ir-board">
@@ -182,13 +185,42 @@
           <span class="en-block point-color-orange">Favorite site</span>
         </h2>
         <ol class="favorite-list">
-          <li><a href="http://ko.learnlayout.com/" target="_blank" title="새창으로 열립니다.">Learn CSS Layout <span class="icon-link-ext" aria-hidden="ture"></span></a></li>
-          <li><a href="http://flexboxfroggy.com/" target="_blank" title="새창으로 열립니다.">Flexbox Froggy <span class="icon-link-ext" aria-hidden="ture"</a></li>
-          <li><a href="http://cssgridgarden.com" target="_blank" title="새창으로 열립니다.">CSS Grid Garden <span class="icon-link-ext" aria-hidden="ture"</a></li>
-          <li><a href="https://developer.mozilla.org/ko/" target="_blank" title="새창으로 열립니다.">MDN Web Docs <span class="icon-link-ext" aria-hidden="ture"</a></li>
+          <li><a href="http://ko.learnlayout.com/" target="_blank" title="새창으로 열립니다.">Learn CSS Layout <span
+                class="icon-link-ext" aria-hidden="true"></span></a></li>
+          <li><a href="http://flexboxfroggy.com/" target="_blank" title="새창으로 열립니다.">Flexbox Froggy <span
+                class="icon-link-ext" aria-hidden="true"></span></a></li>
+          <li><a href="http://cssgridgarden.com" target="_blank" title="새창으로 열립니다.">CSS Grid Garden <span
+                class="icon-link-ext" aria-hidden="true"></span></a></li>
+          <li><a href="https://developer.mozilla.org/ko/" target="_blank" title="새창으로 열립니다.">MDN Web Docs <span
+                class="icon-link-ext" aria-hidden="true"></span></a></li>
         </ol>
       </section>
-      <article class="twitter">트위터</article>
+
+      <article class="twitter">
+
+        <h2 class="twitter-headig ir ir-twitter">
+          트위터
+          <span class="en-block point-color-skyblue">
+            Web Cafe Twitter
+          </span>
+        </h2>
+        <div class="twitter-content">
+          <dl class="twitter-user">
+            <dt class="a11y-hidden">사용자 이름</dt>
+            <dd class="twitter-user-name">김데레사</dd>
+            <dt class="a11y-hidden">사용자 아이디</dt>
+            <dd class="twitter-user-di"><a href="https://twitter.com/@naradesign">@seulbinim</a></dd>
+          </dl>
+          <figure class="twitter-user-profile">
+            <img src="./images/seulbinim.jpg" alt="김데레사" class="responsive circle-photo">
+          </figure>
+          <p class="twitter-summary">
+            웹표준 핵심 가이드북 개정판 출시 기념으로 세미나를 준비했습니다.
+            참석을 원하시는 분들은 트위터로 문의하시기 바랍니다.
+          </p>
+          <time class="twitter-date icon-calendar" datetime="2019-10-20T10:49:17">2019.10.20</time>
+        </div>
+      </article>
     </main>
     <footer class="footer">푸터</footer>
   </div>
