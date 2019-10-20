@@ -356,9 +356,24 @@ text-overflow: ellipsis;
 
 
 .footer{
-  background-color: orange;
-  height: 10vh;
+  /* background-color: #988574; */
+  /* background-image: linear-gradient(-45deg, red, green); */
+  /* background-image:  repeating-linear-gradient(rgba(255,0,0,0.5) 0, rgba(255,0,0,0.5) 20px, transparent 20px, transparent 40px); */
+color: #fff;
+padding: 1.5em 1em;
+  background:
+radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;
 
+
+}
+.address{
+  font-style: normal;
+  margin-bottom: 1em;
 }
 
 
@@ -474,10 +489,9 @@ text-overflow: ellipsis;
     color: #fff;
     background-color: rgba(0,0,0,0.85);
     margin: 0;    
-    height: 100vh;
-    padding: 0;    
+    height: 100vh; 
     width: 80%;
-    padding: 2em 1em; 
+    padding: 2em 1em 2em 1em; 
     transform: none;
 
   }
@@ -495,6 +509,10 @@ text-overflow: ellipsis;
     margin: 0.5em 0;
   }
   
+  .main{
+    
+  padding: 0 1em;
+  }
   .member{
     background-color: #988574;
     color: #fff;
@@ -504,6 +522,13 @@ text-overflow: ellipsis;
   }
   .bar{
     display: none;
+  }
+  .footer{
+    margin-top: 1em;
+  }
+  .address span{
+    display: block;
+  
   }
 }
 
@@ -608,5 +633,8 @@ text-overflow: ellipsis;
   }
   .twitter{
     width: 400px;
+  }
+  .footer{
+    text-align: center;
   }
 }
